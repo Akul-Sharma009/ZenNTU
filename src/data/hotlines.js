@@ -1,0 +1,15 @@
+export const hotlines = [
+  { category: "General", org: "Samaritans of Singapore (SOS)", tel: "1800 221 4444", hours: "Daily (24-hour)" },
+  { category: "General", org: "Care Corner 800 Mandarin Hotline", tel: "1800 353 5800", hours: "Mon–Sun (10am–10pm)" },
+  { category: "General", org: "Gambling Helpline", tel: "1800 666 8668", hours: "N.A." },
+  { category: "General", org: "All Addictions Helpline", tel: "1800 666 8668", hours: "Mon–Fri (8.30am–10pm)" },
+  { category: "Women", org: "AWARE", tel: "1800 774 5935", hours: "Mon–Fri (4pm–10pm)" },
+  { category: "Women", org: "Pregnancy Crisis", tel: "6339 9700", hours: "Mon–Fri (9am–5pm)" },
+  { category: "Psychiatric Help", org: "IMH Crisis Helpline", tel: "6389 2222", hours: "Daily (24-hour)" },
+  { category: "Psychiatric Help", org: "Singapore Association for Mental Health", tel: "1800 283 7019", hours: "Mon–Fri (9am–6pm)" },
+  { category: "Family", org: "Family Service Centres (National)", tel: "1800 838 0100", hours: "Mon–Fri (9am–5pm)" },
+  { category: "Family", org: "Parentline", tel: "6299 8811", hours: "Mon–Fri (9am–5pm)" },
+  { category: "Family", org: "Counselling and Care Centre", tel: "6536 6366", hours: "Mon–Fri (9am–5pm)" },
+  { category: "Sexual Issues", org: "SPPA Counselling Centre", tel: "1800 775 8582", hours: "Mon–Fri (9am–5pm)" },
+  { category: "Sexual Issues", org: "Ooga Chaga", tel: "6268 6626", hours: "Mon–Fri (10am–6pm)" },
+];
