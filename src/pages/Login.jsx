@@ -22,7 +22,7 @@ export default function Login() {
 
       <div className="bg-white/70 backdrop-blur-md border border-white/50 rounded-2xl shadow-xl p-8 w-full max-w-sm relative">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-zen-600">ZenNTU</h1>
+          <h1 className="text-4xl font-bold text-zen-600">NTUZen</h1>
           <p className="text-gray-500 mt-2 font-medium">Say Bye to Str*ss</p>
         </div>
 
