@@ -123,7 +123,7 @@ export default function Home() {
 
   const [mood, setMood] = useState(sessionStorage.getItem('userMood'));
   const [showMoodPopup, setShowMoodPopup] = useState(false);
-  const [streak, setStreak] = useState(1);
+
   const [moodHistory, setMoodHistory] = useState([]);
   const [breathPhase, setBreathPhase] = useState(0);
   const [breathCount, setBreathCount] = useState(4);
@@ -131,21 +131,6 @@ export default function Home() {
   const [journalText, setJournalText] = useState('');
   const [journalSaved, setJournalSaved] = useState(false);
 
-  useEffect(() => {
-    const today = new Date().toDateString();
-    const lastVisit = localStorage.getItem('lastVisit');
-    const saved = parseInt(localStorage.getItem('streak') || '0');
-    let newStreak = 1;
-    if (lastVisit === today) {
-      newStreak = saved || 1;
-    } else {
-      const yesterday = new Date(Date.now() - 86400000).toDateString();
-      newStreak = lastVisit === yesterday ? saved + 1 : 1;
-      localStorage.setItem('lastVisit', today);
-      localStorage.setItem('streak', String(newStreak));
-    }
-    setStreak(newStreak);
-  }, []);
 
   useEffect(() => {
     setMoodHistory(JSON.parse(localStorage.getItem('moodHistory') || '[]').slice(-7));
@@ -217,12 +202,7 @@ export default function Home() {
           <h1 className="text-2xl font-bold text-gray-800 text-center">
             {getGreeting()}, {studentId}! 👋
           </h1>
-          <div className="absolute right-8 flex items-center gap-1.5 bg-orange-50 border border-orange-200 rounded-xl px-3 py-1.5">
-            <span>🔥</span>
-            <span className="text-sm font-semibold text-orange-600">
-              {streak} day{streak !== 1 ? 's' : ''}
-            </span>
-          </div>
+
         </div>
 
         {/* 3-column grid */}
@@ -430,7 +410,7 @@ export default function Home() {
               <div className="flex items-center justify-between mb-3">
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide flex items-center gap-2">
                   <span className="w-1 h-3.5 bg-calm-400 rounded-full inline-block" />
-                  📓 One Good Thing
+                  📓 My Journal
                 </p>
                 <button
                   onClick={() => navigate('/journal')}
